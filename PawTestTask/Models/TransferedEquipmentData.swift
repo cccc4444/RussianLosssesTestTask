@@ -11,7 +11,6 @@ import Foundation
 // Data what I transfer to DetailedViewController
 class TransferedEquipmentData{
     
-    var _day: String!
     var _APC: String!
     var _tank: String!
     var _helicopter: String!
@@ -29,9 +28,8 @@ class TransferedEquipmentData{
     var _vehicles_and_fuel_tanks: String!
     var _cruise_missiles: String!
     
-    init(_day: String, _APC: String, _tank: String, _helicopter: String, _aircraft: String, _field_artillery: String, _military_auto: String, _fuel_tank: String, _drone: String, _naval_ship: String, _anti_aircraft_warfare: String){
+    init(_APC: String, _tank: String, _helicopter: String, _aircraft: String, _field_artillery: String, _military_auto: String, _fuel_tank: String, _drone: String, _naval_ship: String, _anti_aircraft_warfare: String){
         
-        self._day = _day
         self._APC = _APC
         self._tank = _tank
         self._helicopter = _helicopter

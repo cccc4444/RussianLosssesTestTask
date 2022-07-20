@@ -12,5 +12,6 @@ class DetailsCell: UICollectionViewCell{
     @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var textValue: UILabel!
     @IBOutlet weak var gridViewBackground: UIView!
+    @IBOutlet weak var photo: UIImageView!
     
 }

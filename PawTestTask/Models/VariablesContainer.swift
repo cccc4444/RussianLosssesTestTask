@@ -6,19 +6,26 @@
 //
 
 import Foundation
+import UIKit
 
 struct VariablesContainer{
     
+    // Category the user chose on initial screen
+    var categoryPressed = 0
+    var chosenDatatype = 0
+    
+    // names of files
     let JSONEquipFileName: String = "russia_losses_equipment"
     let JSONPersonFileName: String = "russia_losses_personnel"
-    
-    var segmentedControlValue: Int = 0
-    
-    var isGridView = true
 
     // for objects storage
     var equipObjects: [EquipmentAfterManipulation] = []
     var personnelObjects: [Person] = []
+    
+    var detailesData : Any?
+    var details = [[String?]]()
+    var photosEquip = [UIImage]()
+    var photosPersonnel = [UIImage]()
 
     // used to track at what index do these attributes start to appear in array of JSONs
     // so we could avoid potentials errors with initialization

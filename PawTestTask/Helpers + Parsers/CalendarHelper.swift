@@ -77,12 +77,23 @@ class CalendarHelper
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         let pressedData = "\(dateFormatter.string(from: date))"
+        
         let subDay = substituteDay(oldDate: pressedData, newDay: day)
         let cutString = pressedData.dropLast(2)
         let result = cutString + subDay
         
         return String(result)
     }
+    func complileShortDate(chosenDate: String) -> String{
+        let olDateFormatter = DateFormatter()
+        olDateFormatter.dateFormat = "yyyy-MM-dd"
+        let oldDate = olDateFormatter.date(from: chosenDate)
+        let convertDateFormatter = DateFormatter()
+        convertDateFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX") as Locale
+        convertDateFormatter.dateStyle = .medium
+
+        return convertDateFormatter.string(from: oldDate!)
+}
     
     // check if the date is first month on war (February)
     func isFirstMonth(date: Date) -> Bool{

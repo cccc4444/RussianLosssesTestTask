@@ -21,9 +21,6 @@
 		1BAEB26B2875A7FA001842D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BAEB2692875A7FA001842D4 /* Main.storyboard */; };
 		1BAEB26D2875A7FB001842D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BAEB26C2875A7FB001842D4 /* Assets.xcassets */; };
 		1BAEB2702875A7FB001842D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BAEB26E2875A7FB001842D4 /* LaunchScreen.storyboard */; };
-		1BAEB27B2875A7FB001842D4 /* PawTestTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAEB27A2875A7FB001842D4 /* PawTestTaskTests.swift */; };
-		1BAEB2852875A7FB001842D4 /* PawTestTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAEB2842875A7FB001842D4 /* PawTestTaskUITests.swift */; };
-		1BAEB2872875A7FB001842D4 /* PawTestTaskUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAEB2862875A7FB001842D4 /* PawTestTaskUITestsLaunchTests.swift */; };
 		1BAEB29F2875A830001842D4 /* Equipment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAEB2962875A830001842D4 /* Equipment.swift */; };
 		1BAEB2A02875A830001842D4 /* EquipmentAfterManipulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAEB2972875A830001842D4 /* EquipmentAfterManipulation.swift */; };
 		1BAEB2A12875A830001842D4 /* russia_losses_personnel.json in Resources */ = {isa = PBXBuildFile; fileRef = 1BAEB29D2875A830001842D4 /* russia_losses_personnel.json */; };
@@ -36,23 +33,6 @@
 		1BAEB2B02875B817001842D4 /* DateExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAEB2AF2875B817001842D4 /* DateExtention.swift */; };
 		1BAEB2B22875B837001842D4 /* UIVIewControllerExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAEB2B12875B837001842D4 /* UIVIewControllerExtention.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		1BAEB2772875A7FB001842D4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1BAEB2582875A7FA001842D4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1BAEB25F2875A7FA001842D4;
-			remoteInfo = PawTestTask;
-		};
-		1BAEB2812875A7FB001842D4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1BAEB2582875A7FA001842D4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1BAEB25F2875A7FA001842D4;
-			remoteInfo = PawTestTask;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1B13FCC028771927008F6B3E /* DetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedViewController.swift; sourceTree = "<group>"; };
@@ -71,11 +51,6 @@
 		1BAEB26C2875A7FB001842D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1BAEB26F2875A7FB001842D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1BAEB2712875A7FB001842D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1BAEB2762875A7FB001842D4 /* PawTestTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PawTestTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1BAEB27A2875A7FB001842D4 /* PawTestTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PawTestTaskTests.swift; sourceTree = "<group>"; };
-		1BAEB2802875A7FB001842D4 /* PawTestTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PawTestTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1BAEB2842875A7FB001842D4 /* PawTestTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PawTestTaskUITests.swift; sourceTree = "<group>"; };
-		1BAEB2862875A7FB001842D4 /* PawTestTaskUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PawTestTaskUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1BAEB2962875A830001842D4 /* Equipment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Equipment.swift; sourceTree = "<group>"; };
 		1BAEB2972875A830001842D4 /* EquipmentAfterManipulation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EquipmentAfterManipulation.swift; sourceTree = "<group>"; };
 		1BAEB29D2875A830001842D4 /* russia_losses_personnel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = russia_losses_personnel.json; sourceTree = "<group>"; };
@@ -91,20 +66,6 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		1BAEB25D2875A7FA001842D4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1BAEB2732875A7FB001842D4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1BAEB27D2875A7FB001842D4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -127,8 +88,6 @@
 			isa = PBXGroup;
 			children = (
 				1BAEB2622875A7FA001842D4 /* PawTestTask */,
-				1BAEB2792875A7FB001842D4 /* PawTestTaskTests */,
-				1BAEB2832875A7FB001842D4 /* PawTestTaskUITests */,
 				1BAEB2612875A7FA001842D4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -137,8 +96,6 @@
 			isa = PBXGroup;
 			children = (
 				1BAEB2602875A7FA001842D4 /* PawTestTask.app */,
-				1BAEB2762875A7FB001842D4 /* PawTestTaskTests.xctest */,
-				1BAEB2802875A7FB001842D4 /* PawTestTaskUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -160,23 +117,6 @@
 				1BAEB2712875A7FB001842D4 /* Info.plist */,
 			);
 			path = PawTestTask;
-			sourceTree = "<group>";
-		};
-		1BAEB2792875A7FB001842D4 /* PawTestTaskTests */ = {
-			isa = PBXGroup;
-			children = (
-				1BAEB27A2875A7FB001842D4 /* PawTestTaskTests.swift */,
-			);
-			path = PawTestTaskTests;
-			sourceTree = "<group>";
-		};
-		1BAEB2832875A7FB001842D4 /* PawTestTaskUITests */ = {
-			isa = PBXGroup;
-			children = (
-				1BAEB2842875A7FB001842D4 /* PawTestTaskUITests.swift */,
-				1BAEB2862875A7FB001842D4 /* PawTestTaskUITestsLaunchTests.swift */,
-			);
-			path = PawTestTaskUITests;
 			sourceTree = "<group>";
 		};
 		1BAEB2932875A830001842D4 /* Extentions */ = {
@@ -268,42 +208,6 @@
 			productReference = 1BAEB2602875A7FA001842D4 /* PawTestTask.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1BAEB2752875A7FB001842D4 /* PawTestTaskTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1BAEB28D2875A7FB001842D4 /* Build configuration list for PBXNativeTarget "PawTestTaskTests" */;
-			buildPhases = (
-				1BAEB2722875A7FB001842D4 /* Sources */,
-				1BAEB2732875A7FB001842D4 /* Frameworks */,
-				1BAEB2742875A7FB001842D4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1BAEB2782875A7FB001842D4 /* PBXTargetDependency */,
-			);
-			name = PawTestTaskTests;
-			productName = PawTestTaskTests;
-			productReference = 1BAEB2762875A7FB001842D4 /* PawTestTaskTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		1BAEB27F2875A7FB001842D4 /* PawTestTaskUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1BAEB2902875A7FB001842D4 /* Build configuration list for PBXNativeTarget "PawTestTaskUITests" */;
-			buildPhases = (
-				1BAEB27C2875A7FB001842D4 /* Sources */,
-				1BAEB27D2875A7FB001842D4 /* Frameworks */,
-				1BAEB27E2875A7FB001842D4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1BAEB2822875A7FB001842D4 /* PBXTargetDependency */,
-			);
-			name = PawTestTaskUITests;
-			productName = PawTestTaskUITests;
-			productReference = 1BAEB2802875A7FB001842D4 /* PawTestTaskUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -316,14 +220,6 @@
 				TargetAttributes = {
 					1BAEB25F2875A7FA001842D4 = {
 						CreatedOnToolsVersion = 13.4.1;
-					};
-					1BAEB2752875A7FB001842D4 = {
-						CreatedOnToolsVersion = 13.4.1;
-						TestTargetID = 1BAEB25F2875A7FA001842D4;
-					};
-					1BAEB27F2875A7FB001842D4 = {
-						CreatedOnToolsVersion = 13.4.1;
-						TestTargetID = 1BAEB25F2875A7FA001842D4;
 					};
 				};
 			};
@@ -341,8 +237,6 @@
 			projectRoot = "";
 			targets = (
 				1BAEB25F2875A7FA001842D4 /* PawTestTask */,
-				1BAEB2752875A7FB001842D4 /* PawTestTaskTests */,
-				1BAEB27F2875A7FB001842D4 /* PawTestTaskUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -357,20 +251,6 @@
 				1BAEB2702875A7FB001842D4 /* LaunchScreen.storyboard in Resources */,
 				1BAEB26D2875A7FB001842D4 /* Assets.xcassets in Resources */,
 				1BAEB26B2875A7FA001842D4 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1BAEB2742875A7FB001842D4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1BAEB27E2875A7FB001842D4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,37 +284,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1BAEB2722875A7FB001842D4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1BAEB27B2875A7FB001842D4 /* PawTestTaskTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1BAEB27C2875A7FB001842D4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1BAEB2872875A7FB001842D4 /* PawTestTaskUITestsLaunchTests.swift in Sources */,
-				1BAEB2852875A7FB001842D4 /* PawTestTaskUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		1BAEB2782875A7FB001842D4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1BAEB25F2875A7FA001842D4 /* PawTestTask */;
-			targetProxy = 1BAEB2772875A7FB001842D4 /* PBXContainerItemProxy */;
-		};
-		1BAEB2822875A7FB001842D4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1BAEB25F2875A7FA001842D4 /* PawTestTask */;
-			targetProxy = 1BAEB2812875A7FB001842D4 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1BAEB2692875A7FA001842D4 /* Main.storyboard */ = {
@@ -591,7 +441,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = sad.MusicWireFrame;
+				PRODUCT_BUNDLE_IDENTIFIER = sad.PawTestTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -620,87 +470,11 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = sad.MusicWireFrame;
+				PRODUCT_BUNDLE_IDENTIFIER = sad.PawTestTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		1BAEB28E2875A7FB001842D4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8M5L73RX22;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = sad.PawTestTaskTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PawTestTask.app/PawTestTask";
-			};
-			name = Debug;
-		};
-		1BAEB28F2875A7FB001842D4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8M5L73RX22;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = sad.PawTestTaskTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PawTestTask.app/PawTestTask";
-			};
-			name = Release;
-		};
-		1BAEB2912875A7FB001842D4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8M5L73RX22;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = sad.PawTestTaskUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = PawTestTask;
-			};
-			name = Debug;
-		};
-		1BAEB2922875A7FB001842D4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8M5L73RX22;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = sad.PawTestTaskUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = PawTestTask;
 			};
 			name = Release;
 		};
@@ -721,24 +495,6 @@
 			buildConfigurations = (
 				1BAEB28B2875A7FB001842D4 /* Debug */,
 				1BAEB28C2875A7FB001842D4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1BAEB28D2875A7FB001842D4 /* Build configuration list for PBXNativeTarget "PawTestTaskTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1BAEB28E2875A7FB001842D4 /* Debug */,
-				1BAEB28F2875A7FB001842D4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1BAEB2902875A7FB001842D4 /* Build configuration list for PBXNativeTarget "PawTestTaskUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1BAEB2912875A7FB001842D4 /* Debug */,
-				1BAEB2922875A7FB001842D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

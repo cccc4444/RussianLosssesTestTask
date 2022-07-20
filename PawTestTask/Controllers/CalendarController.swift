@@ -15,6 +15,7 @@ class CalendarController: UIViewController, UICollectionViewDelegate, UICollecti
     
 	var selectedDate = Date("2022-02-25")
 	var totalSquares = [String]()
+    
 	
 	override func viewDidLoad()
 	{
@@ -70,12 +71,12 @@ class CalendarController: UIViewController, UICollectionViewDelegate, UICollecti
 	}
     
     func initializeTransferedPersonnelData(record: Person) -> TransferedPersonnelData{
-        let transferedPersonnelData = TransferedPersonnelData(day: record.day, personnel: record.personnel, pow: record.pow
+        let transferedPersonnelData = TransferedPersonnelData(personnel: record.personnel, pow: record.pow
         )
         return transferedPersonnelData
     }
     func initializeTransferedEquipmentData(record: EquipmentAfterManipulation) -> TransferedEquipmentData{
-        let transferedEquipmentData = TransferedEquipmentData(_day: record.day, _APC: record.APC, _tank: record.tank, _helicopter: record.helicopter, _aircraft: record.aircraft, _field_artillery: record.field_artillery, _military_auto: record.military_auto, _fuel_tank: record.fuel_tank, _drone: record.drone, _naval_ship: record.naval_ship, _anti_aircraft_warfare: record.anti_aircraft_warfare)
+        let transferedEquipmentData = TransferedEquipmentData(_APC: record.APC, _tank: record.tank, _helicopter: record.helicopter, _aircraft: record.aircraft, _field_artillery: record.field_artillery, _military_auto: record.military_auto, _fuel_tank: record.fuel_tank, _drone: record.drone, _naval_ship: record.naval_ship, _anti_aircraft_warfare: record.anti_aircraft_warfare)
 
             if let special_equipment = record.special_equipment {
                 transferedEquipmentData.setSpecialEquipment(_special_equipment: special_equipment)
@@ -112,11 +113,6 @@ class CalendarController: UIViewController, UICollectionViewDelegate, UICollecti
         self.dismiss(animated: true)
     }
     
-    override open var shouldAutorotate: Bool
-    {
-        return false
-    }
-    
     // MARK: Collection view data delegate and data source methods
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 		totalSquares.count
@@ -132,28 +128,35 @@ class CalendarController: UIViewController, UICollectionViewDelegate, UICollecti
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     
         let detailedVC = storyboard?.instantiateViewController(withIdentifier: "DetailedViewController") as? DetailedViewController
-
+        
         if totalSquares[indexPath.item] != ""{
             let clickedDate = CalendarHelper().compileDate(date: selectedDate, day: totalSquares[indexPath.item])
+            
             if clickedDate < VariablesContainer.instance.equipObjects.first!.date || clickedDate > VariablesContainer.instance.equipObjects.last!.date{
             showToast(message: "No info")
         }
             
-            switch VariablesContainer.instance.segmentedControlValue{
-            case 0:
-            for record in VariablesContainer.instance.equipObjects where clickedDate == record.date{
+            switch VariablesContainer.instance.chosenDatatype{
+            case 1:
+                for record in VariablesContainer.instance.equipObjects where clickedDate == record.date{
                 let instanceOfEquipmentData = initializeTransferedEquipmentData(record: record)
                 detailedVC?.transferedEquipmentData = instanceOfEquipmentData
+                detailedVC?.day = String(record.day)
+                
                 self.navigationController?.pushViewController(detailedVC!, animated: true)
             }
-            default:
-            for record in VariablesContainer.instance.personnelObjects where clickedDate == record.date{
+            case 2:
+                for record in VariablesContainer.instance.personnelObjects where clickedDate == record.date{
                 let instanceOfPersonnelData = initializeTransferedPersonnelData(record: record)
                 detailedVC?.transferedPersonnelData = instanceOfPersonnelData
+                detailedVC?.day = String(record.day)
+               
                 self.navigationController?.pushViewController(detailedVC!, animated: true)
             }
             
-        }
+            default:
+                return
+            }
         
         }
     }

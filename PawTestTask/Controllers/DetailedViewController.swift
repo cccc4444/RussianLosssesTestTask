@@ -10,11 +10,12 @@ import UIKit
 class DetailedViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource{
 
     @IBOutlet weak var collectionView: UICollectionView!
-
+    @IBOutlet weak var currentDate: UILabel!
+    
     var transferedEquipmentData: TransferedEquipmentData?
     var transferedPersonnelData: TransferedPersonnelData?
-    var detailesData : Any?
-    var details = [[String?]]()
+    lazy var container = VariablesContainer()
+    var day = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,14 +23,13 @@ class DetailedViewController: UIViewController, UICollectionViewDelegate, UIColl
         collectionView.delegate = self
         collectionView.dataSource = self
         
-        setDetailedValues()
-        setArrayValues()
         initalCollectionViewSetup()
-        
-        
+        setTransferedValues()
+        setArrayValues()
+        addPhotos()
         
     }
-    
+    //To overcome buggy NavigationBar
     override func viewWillAppear(_ animated: Bool) {
         changeNaigationTitleColor(color: UIColor.white)
     }
@@ -38,18 +38,7 @@ class DetailedViewController: UIViewController, UICollectionViewDelegate, UIColl
         changeNaigationTitleColor(color: UIColor.black)
     }
     
-    
-    
-    
-    //Initial CollectionViewSetup
-    func initalCollectionViewSetup(){
-        collectionView.contentInset = UIEdgeInsets(top: 25, left: 0, bottom: 0, right: 0)
-        collectionView.backgroundView?.backgroundColor = UIColor.clear
-        collectionView.backgroundColor = UIColor.clear
-    }
-    
-    //To overcome buggy NavigationBar
-    func changeNaigationTitleColor(color: UIColor){
+    private func changeNaigationTitleColor(color: UIColor){
         self.navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.largeTitleDisplayMode = .always
         let appearance = UINavigationBarAppearance()
@@ -62,29 +51,43 @@ class DetailedViewController: UIViewController, UICollectionViewDelegate, UIColl
         self.navigationController?.navigationBar.standardAppearance = appearance
     }
     
+    // Adding photos from asssets
+    private func addPhotos(){
+        container.photosEquip = (0...14).compactMap { UIImage(named: "img\($0)") }
+        container.photosPersonnel = (0...2).compactMap{ UIImage(named: "per\($0)") }
+    }
+    
+    //Initial CollectionViewSetup
+    private func initalCollectionViewSetup(){
+        collectionView.contentInset = UIEdgeInsets(top: 25, left: 0, bottom: 0, right: 0)
+        collectionView.backgroundView?.backgroundColor = UIColor.clear
+        collectionView.backgroundColor = UIColor.clear
+    }
+    
     // Define what data was transfered from previous screen
-    func setDetailedValues(){
+    private func setTransferedValues(){
         if let transferedEquipmentData = transferedEquipmentData {
-            self.detailesData = transferedEquipmentData
+            container.detailesData = transferedEquipmentData
         }
         else {
-            self.detailesData = transferedPersonnelData
+            container.detailesData = transferedPersonnelData
         }
+        
+        currentDate.text = day
     }
     // Make an array of transfered data proprties
-    func setArrayValues(){
-        self.details = (Mirror(reflecting: detailesData!).children.compactMap({ [$0.label, $0.value as? String]
+    private func setArrayValues(){
+        container.details = (Mirror(reflecting: container.detailesData!).children.compactMap({ [$0.label, $0.value as? String]
         }))
     }
-    // Remove redundant chars and capitalize letters
-    func setTitleValue(str: String) -> String{
+    // Remove redundant chars and capitalize letters from data
+    private func setTitleValue(str: String) -> String{
         var newString = str
         newString = String(newString.replacingOccurrences(of: "_", with: " ").dropFirst()).capitalized
-    
         return newString
     }
     // Find count of elements that are not nil
-    func excludeNilsCount(arr: [[String?]]) -> Int{
+    private func excludeNilsCount(arr: [[String?]]) -> Int{
         var counter = 0
         for i in arr{
             if i[1] != nil{
@@ -96,24 +99,29 @@ class DetailedViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     
     // MARK: IBActions
-
     @IBAction func closePressed(_ sender: Any) {
         self.dismiss(animated: true)
     }
     
-   
     
     //MARK: collectionView methods
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return excludeNilsCount(arr: details)
+        return excludeNilsCount(arr: container.details)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DetailsCell", for: indexPath) as! DetailsCell
 
-        if details[indexPath.item][1] != nil{
-            cell.textLabel.text = setTitleValue(str: details[indexPath.item][0]!)
-            cell.textValue.text = details[indexPath.item][1]
+        if container.details[indexPath.item][1] != nil{
+            cell.textLabel.text = setTitleValue(str: container.details[indexPath.item][0]!)
+            cell.textValue.text = container.details[indexPath.item][1]
+            
+            if transferedEquipmentData != nil{
+                cell.photo.image = container.photosEquip[Int(indexPath.item)]
+            }
+            else{
+                cell.photo.image = container.photosPersonnel[Int(indexPath.item)]
+            }
         }
         
         return cell
