@@ -31,6 +31,16 @@ This repository contains test task for MacPaw internship. The app parses data fr
 - iOS 15.5
 - Xcode 13.4.1
 
-
+### List of what needs to be done to make the project ready for publishing in the App Store as a commercial product
+- Some additional refactoring
+- Cover the code with Unit and UI Tests with XCTest
+- Create a paid Apple developer account
+- Set unique bundle ID 
+- Set the Version Number and Build String
+- Set the app category
+- Set deployment info settings
+- Provide a launchscreen
+- Optional beta-test using TestFlight
+- Load app into App Store Connect and provide all the necessary screenshots, licence agreement, description.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
